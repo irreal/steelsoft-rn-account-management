@@ -5,6 +5,8 @@
 // import User from 'path/to/interfaces';
 
 export type User = {
-  id: number
-  name: string
+  uid: string
+  email: string
+  creationTime: string
+  disabled: boolean
 }

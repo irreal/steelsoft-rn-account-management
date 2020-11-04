@@ -17,23 +17,18 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <header>
       <nav>
         <Link href="/">
-          <a>Home</a>
+          <a>Upravljanje korisnicima</a>
         </Link>{' '}
         |{' '}
         <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
+          <a>O Aplikaciji</a>
+        </Link>
       </nav>
     </header>
     {children}
     <footer>
       <hr />
-      <span>I'm here to stay (Footer)</span>
+      {/* <span>I'm here to stay (Footer)</span> */}
     </footer>
   </div>
 )

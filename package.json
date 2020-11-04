@@ -2,16 +2,23 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3001",
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
     "type-check": "tsc"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "firebase": "^8.0.0",
     "next": "latest",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "recoil": "^0.1.2",
+    "swr": "^0.3.8"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
