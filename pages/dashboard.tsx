@@ -6,6 +6,7 @@ import { logout } from '../services/auth';
 import useUser from '../data/useUser';
 import { useEffect } from 'react';
 import Router from "next/router";
+import UserList from '../components/UserList';
 
 const DashboardPage = () => {
   const [text, setText] = useRecoilState(textState);
@@ -32,6 +33,7 @@ const DashboardPage = () => {
           mutate();
         });
       }}>Izloguj se</Button>
+      <UserList />
     </Layout>
   )
 }

@@ -6,12 +6,13 @@ export default function useUsers() {
     const { data, mutate, error } = useSWR("api_users", usersFetcher);
 
     const loading = !data && !error;
-    const loggedOut = error;
-
+    if (error) {
+        console.error(error);
+    }
     return {
         loading,
-        loggedOut,
-        user: data,
+        users: data,
+        error,
         mutate
     };
 }

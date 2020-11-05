@@ -14,18 +14,18 @@ export function getUserDetails(): Promise<{ user: User | null }> {
                 resolve({ user: null });
                 return;
             }
-            resolve({ user: { uid: user!.uid, creationTime: user!.metadata.creationTime as string, disabled: false, email: user!.email as string } });
+            resolve({ user: { uid: user!.uid, creationTime: user!.metadata.creationTime as string, disabled: false, email: user!.email as string, admin: true } });
         });
     });
 }
 export function getIdToken(): Promise<string> {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
         firebase.auth().onAuthStateChanged((user) => {
             if (!user) {
-                resolve(undefined);
+                reject(new Error('user not logged in'));
                 return;
             }
-            return user?.getIdToken();
+            user?.getIdToken().then(t => resolve(t));
         });
     });
 }

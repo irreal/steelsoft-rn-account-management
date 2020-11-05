@@ -10,7 +10,7 @@ export async function usersFetcher(): Promise<User[]> {
     }
     const response = await fetch(url + '/users', {
         headers: {
-            'Authorization': 'Bearer ' + token
+            'token': token
         }
     });
     return response.json();

@@ -9,4 +9,5 @@ export type User = {
   email: string
   creationTime: string
   disabled: boolean
+  admin: boolean
 }
