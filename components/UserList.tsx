@@ -10,7 +10,14 @@ const UserList = () => {
         return <div> puklo u učitavanju :( {JSON.stringify(error)}</div>
     }
 
-    return users && users.length > 0 && users.map(u => <UserRow user={u} />) || <div>nema usera ?</div>;
+    const userComponents = [];
+    if (users && users.length > 0) {
+        userComponents.push(...users.map(u => <UserRow key={u.uid} user={u} />));
+    }
+    else {
+        userComponents.push(<div>nema usera ?</div>);
+    }
+    return <>{userComponents}</>
 }
 
 export default UserList

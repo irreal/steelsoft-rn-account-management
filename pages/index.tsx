@@ -1,4 +1,4 @@
-import { Button, InputGroup, Input, InputRightElement, Icon, IconButton, Stack } from "@chakra-ui/core"
+import { Button, InputGroup, Input, InputRightElement, Icon, Stack } from "@chakra-ui/core"
 import { useEffect, useState } from "react";
 import useUser from "../data/useUser";
 import Router from "next/router";
