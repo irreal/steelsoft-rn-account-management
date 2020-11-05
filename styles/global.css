@@ -1,0 +1,17 @@
+.full-height-without-padding {
+    height: calc(100vh - 2.5rem)
+}
+button.floating-action-button {
+    position: fixed;
+    z-index:1;
+    width:70px;
+    height:70px;
+}
+button.floating-action-button.desktop{
+    right:25px;
+    top:25px;
+}
+button.floating-action-button.mobile{
+    right:25px;
+    bottom:25px;
+}

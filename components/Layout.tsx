@@ -18,14 +18,14 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Flex direction={["column", "row"]} flexGrow={1} >
+      <Flex direction={["column", "column", "column", "row"]} flexGrow={1} >
         <header>
-          <Flex as="nav" h={["auto", "100vh"]} direction={["row", "column"]} px={[4, 1]} py={[1, 4]}>
+          <Flex as="nav" h={["auto", "auto", "auto", "100%"]} direction={["row", "row", "row", "column"]} px={[4, 1]} py={[1, 4]}>
             <Box my={4} d="flex" flexDir="column" alignItems="center">
               <Avatar name={user.user?.email}></Avatar>
               <Text fontSize="xs">{user.user?.email}</Text>
             </Box>
-            <Box d="flex" flexDir={["row-reverse", "column-reverse"]} alignItems="center" flexGrow={1}>
+            <Box d="flex" flexDir={["row-reverse", "row-reverse", "row-reverse", "column-reverse"]} alignItems="center" flexGrow={1}>
               <Button onClick={() => {
                 logout().then(() => {
                   Router.replace("/");
@@ -40,10 +40,6 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           {children}
         </Box>
       </Flex>
-      <footer>
-        <hr />
-        <Text px={8}>SteelSoft RN Administracija korisnika</Text>
-      </footer>
     </Box>
   );
 }

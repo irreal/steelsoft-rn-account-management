@@ -3,6 +3,7 @@ import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { customTheme } from '../theme/customTheme';
 import { RecoilRoot } from 'recoil'
 import '../services/firebase';
+import '../styles/global.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
